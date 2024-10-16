@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>Delete Asset</h1>
+  <p>Are you sure you want to delete the asset "{{ asset }}"?</p>
+  <form method="post">
+    {% csrf_token %}
+    <button type="submit">Yes, delete</button>
+    <a href="{% url 'inventory:asset_list' %}">Cancel</a>
+  </form>
+{% endblock %}

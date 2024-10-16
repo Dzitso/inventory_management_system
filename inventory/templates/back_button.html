@@ -1,0 +1,7 @@
+{% if request.META.HTTP_REFERER %}
+    <li class="nav-item">
+        <a href="{{ request.META.HTTP_REFERER }}" class="nav-link">
+            <i class="fas fa-arrow-left"></i> Back
+        </a>
+    </li>
+{% endif %}
